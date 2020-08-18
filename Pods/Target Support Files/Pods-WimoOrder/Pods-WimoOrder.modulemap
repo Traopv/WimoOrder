@@ -1,0 +1,6 @@
+framework module Pods_WimoOrder {
+  umbrella header "Pods-WimoOrder-umbrella.h"
+
+  export *
+  module * { export * }
+}

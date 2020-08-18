@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ListOfFoodView" customModule="WimoOrder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WS5-fL-Mr4">
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HJM-kK-rCu">
+                            <rect key="frame" x="226" y="11" width="124" height="18"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWH-WP-sus">
+                                    <rect key="frame" x="0.0" y="0.0" width="38.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.234.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbW-1T-Rrg">
+                                    <rect key="frame" x="42.5" y="0.0" width="68.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.9487112164" green="0.28684389589999998" blue="0.28530192380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-sV-gNQ">
+                                    <rect key="frame" x="115" y="0.0" width="9" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.9487112164" green="0.28684389589999998" blue="0.28530192380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HJM-kK-rCu" secondAttribute="trailing" constant="25" id="5Ii-Pg-NmF"/>
+                        <constraint firstAttribute="height" constant="40" id="75I-SD-eYd"/>
+                        <constraint firstItem="HJM-kK-rCu" firstAttribute="centerY" secondItem="WS5-fL-Mr4" secondAttribute="centerY" id="cGz-G9-X9b"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-vN-6Qk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="2y0-pV-cpj"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="82s-Qn-aVe"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1X-tW-QOe">
+                    <rect key="frame" x="323" y="571" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="CT0-TE-Gnx"/>
+                        <constraint firstAttribute="width" constant="36" id="mny-V5-QFw"/>
+                    </constraints>
+                    <state key="normal" image="icon_add"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WS5-fL-Mr4" secondAttribute="bottom" id="3ab-m0-5Rc"/>
+                <constraint firstItem="ZsH-vN-6Qk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EYG-bn-lir"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZsH-vN-6Qk" secondAttribute="trailing" id="JbY-Ne-LEq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="J1X-tW-QOe" secondAttribute="trailing" constant="16" id="Lmw-8W-eUC"/>
+                <constraint firstItem="WS5-fL-Mr4" firstAttribute="top" secondItem="ZsH-vN-6Qk" secondAttribute="bottom" id="YJR-0I-OQc"/>
+                <constraint firstItem="WS5-fL-Mr4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="acS-gi-B9i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WS5-fL-Mr4" secondAttribute="trailing" id="cZd-VJ-B9O"/>
+                <constraint firstItem="ZsH-vN-6Qk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fl0-mZ-lfg"/>
+                <constraint firstItem="WS5-fL-Mr4" firstAttribute="top" secondItem="J1X-tW-QOe" secondAttribute="bottom" constant="20" id="q4g-Sz-Lap"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lbPrice" destination="qbW-1T-Rrg" id="jNq-Qh-0kV"/>
+                <outlet property="myTable" destination="ZsH-vN-6Qk" id="Zks-cH-KKY"/>
+                <outlet property="viewPay" destination="WS5-fL-Mr4" id="csI-yq-FWe"/>
+            </connections>
+            <point key="canvasLocation" x="-81" y="149"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_add" width="96" height="96"/>
+    </resources>
+</document>
